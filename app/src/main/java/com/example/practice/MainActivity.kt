@@ -21,6 +21,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.practice.firstTask.FirstSingleton
 import com.example.practice.firstTask.SecondSingleton
+import com.example.practice.fourthTask.MultiEven
+import com.example.practice.fourthTask.multiIfEven
 import com.example.practice.secondTask.Audi
 import com.example.practice.secondTask.Kawasaki
 import com.example.practice.secondTask.Mercedes
@@ -45,9 +47,11 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun ShowName(modifier: Modifier = Modifier) {
+    // First task
     val firstSingletonName = FirstSingleton.printName()
     val secondSingletonName = SecondSingleton.getInstance()
 
+    // Second task
     val audi = Audi(name = "Audi", volume = 100.2f)
     val mercedes = Mercedes(name = "Mercedes", volume = 100.3f)
     val yamaha = Yamaha(name = "Yamaha", volume = 87.5f)
@@ -56,7 +60,12 @@ fun ShowName(modifier: Modifier = Modifier) {
     val listVehicles = listOf<Vehicles>(audi, mercedes, yamaha, kawasaki)
     val sortedVehicles = listVehicles.sortedByDescending { it.volume }
 
+    // Third task
     val testArray = intArrayOf(0, 1, 2, 2, 3, 0, 4, 2)
+
+    // Fourth task
+    val list = listOf(3, 52, 3, 1, 5, 20)
+    val multiEven = MultiEven(list)
 
     Text(
         text = firstSingletonName,
@@ -77,6 +86,17 @@ fun ShowName(modifier: Modifier = Modifier) {
         }
         Spacer(modifier = modifier.padding(top = 20.dp))
         Text(text = removeElement(testArray, 2).contentToString())
+
+        Column(
+            modifier = modifier.padding(top = 10.dp),
+            verticalArrangement = Arrangement.spacedBy(10.dp)
+        ){
+            Text(text = "Base list: $list \n" +
+                    "First Decorator list: ${multiEven.multiIfEven()}")
+
+            Text(text = "Base list: $list \n" +
+                    "Second Decorator list: ${list.multiIfEven()}")
+        }
     }
 }
 
