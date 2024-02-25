@@ -1,7 +1,6 @@
 package com.example.practice
 
 import android.os.Bundle
-import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
@@ -27,6 +26,7 @@ import com.example.practice.secondTask.Kawasaki
 import com.example.practice.secondTask.Mercedes
 import com.example.practice.secondTask.Vehicles
 import com.example.practice.secondTask.Yamaha
+import com.example.practice.thirdTask.removeElement
 import com.example.practice.ui.theme.PracticeTheme
 
 class MainActivity : ComponentActivity() {
@@ -56,6 +56,8 @@ fun ShowName(modifier: Modifier = Modifier) {
     val listVehicles = listOf<Vehicles>(audi, mercedes, yamaha, kawasaki)
     val sortedVehicles = listVehicles.sortedByDescending { it.volume }
 
+    val testArray = intArrayOf(0, 1, 2, 2, 3, 0, 4, 2)
+
     Text(
         text = firstSingletonName,
         modifier = modifier
@@ -73,6 +75,8 @@ fun ShowName(modifier: Modifier = Modifier) {
                 Text(text = it.toString())
             }
         }
+        Spacer(modifier = modifier.padding(top = 20.dp))
+        Text(text = removeElement(testArray, 2).contentToString())
     }
 }
 
