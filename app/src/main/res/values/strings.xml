@@ -47,4 +47,8 @@
     <string name="tag2_3">Bikram</string>
     <string name="tag2_4">Yin</string>
     <string name="tag2_5">Kundalini</string>
+
+    <string name="GoThird">Go to 3 fragment</string>
+    <string name="GoMain">Go to main fragment</string>
+    <string name="toast_text">exit</string>
 </resources>

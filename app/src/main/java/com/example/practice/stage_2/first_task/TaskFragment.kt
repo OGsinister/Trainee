@@ -6,7 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.navigation.findNavController
 import com.example.practice.R
 import com.example.practice.databinding.FragmentTaskBinding
 import com.example.practice.stage_2.second_task.Card
@@ -27,11 +29,11 @@ class TaskFragment : Fragment(R.layout.fragment_task) {
         val case1 = createFirstCard()
         val case2 = createSecondCard()
 
-        _binding.apply {
-            this?.userName?.text = case1.userName
-            this?.cardText?.text = case1.description
+        _binding?.apply {
+            this.userName.text = case1.userName
+            this.cardText.text = case1.description
 
-            case1.image?.let { this?.optionalImage?.setImageResource(it) }
+            case1.image?.let { this.optionalImage.setImageResource(it) }
             case1.tags.forEach { text ->
                 val textView = context?.let { context ->
                     createTextView(context, text)
@@ -40,6 +42,14 @@ class TaskFragment : Fragment(R.layout.fragment_task) {
                     tagLayout.addView(textView)
                     flowContainer.addView(textView)
                 }
+            }
+
+            button.setOnClickListener {
+                view?.findNavController()?.navigate(R.id.action_firstFragment_to_secondFragment)
+            }
+
+            exitButton.setOnClickListener {
+                Toast.makeText(context, getString(R.string.toast_text), Toast.LENGTH_SHORT).show()
             }
         }
 
