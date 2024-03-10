@@ -1,10 +1,10 @@
-package com.example.practice.secondTask
+package com.example.practice.stage_1.secondTask
 
-abstract class Vehicles: SoundAble{
+abstract class Vehicles: SoundAble {
     abstract val volume: Float
 }
 
-abstract class Car: Vehicles(), RadioAble{
+abstract class Car: Vehicles(), RadioAble {
     abstract val name: String
 }
 

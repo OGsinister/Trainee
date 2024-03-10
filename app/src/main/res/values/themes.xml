@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-    <style name="Theme.Practice" parent="android:Theme.Material.Light.NoActionBar" />
+    <style name="label">
+        <item name="android:background">@color/labelBackgroundColor</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:padding">8dp</item>
+        <item name="fontWeight">600</item>
+        <item name="android:textSize">11sp</item>
+    </style>
 </resources>

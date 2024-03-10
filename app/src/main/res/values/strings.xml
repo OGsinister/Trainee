@@ -1,3 +1,54 @@
 <resources>
     <string name="app_name">Practice</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="userName">Имя пользователя</string>
+    <string name="mail">mail@mail.com</string>
+    <string name="cardText">Текст текст текст текст текст текст текст текст текст текст</string>
+    <string name="sign">Подпись:</string>
+    <string name="inscription"> Надпись</string>
+    <string name="tags">Теги</string>
+    <string name="label1">лейбл</string>
+    <string name="label2">лейбл с длинным названием</string>
+    <string name="label3">лейбл2</string>
+    <string name="button">Кнопка</string>
+    <string name="exitButton">Выйти</string>
+
+    <!-- Case1 -->
+    <string name="HelloAdeleSong">
+        Hello, its me I was wondering if after all these years you did
+        like to meet To go over everything They say that times supposed to heal ya, but I aint
+        done much healing
+    </string>
+    <string name="UserName1">adele@gmail.ru</string>
+    <string name="sign1">Adeles GRAMMY History</string>
+    <string name="tag1">Easy on me</string>
+    <string name="tag2">Skyfall</string>
+    <string name="tag3">Hello</string>
+    <string name="tag4">When We Where Young</string>
+    <string name="tag5">Remedy</string>
+    <string name="tag6">Send My Love (To Your New Lover)</string>
+    <string name="tag7">Rolling in the Deep</string>
+
+    <!-- Case2 -->
+    <string name="UserName2">Cortisol@body.com</string>
+    <string name="desc2">
+        An ancient discipline, Yoga is a concept that comes from a
+        Sanskrit word meaning "union". It combines bodily processes
+        with breathing techniques, meditation, and mental exercises
+        in order to bring a sense of calm and composure in life.
+    </string>
+    <string name="sign2">
+        Yoga has the ability to reduce stress by diminishing mental
+        discomfort.
+    </string>
+    <string name="tag2_1">Ashtanga</string>
+    <string name="tag2_2">Iyengar</string>
+    <string name="tag2_3">Bikram</string>
+    <string name="tag2_4">Yin</string>
+    <string name="tag2_5">Kundalini</string>
+
+    <string name="GoThird">Go to 3 fragment</string>
+    <string name="GoMain">Go to main fragment</string>
+    <string name="toast_text">exit</string>
 </resources>

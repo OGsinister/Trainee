@@ -1,4 +1,4 @@
-package com.example.practice.firstTask
+package com.example.practice.stage_1.firstTask
 
 import android.util.Log
 
@@ -8,7 +8,7 @@ class SecondSingleton private constructor(){
     companion object{
         private var instance: SecondSingleton? = null
 
-        fun getInstance(): SecondSingleton{
+        fun getInstance(): SecondSingleton {
             if(instance == null){
                 instance = SecondSingleton()
             }

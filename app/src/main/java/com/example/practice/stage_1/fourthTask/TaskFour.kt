@@ -1,4 +1,4 @@
-package com.example.practice.fourthTask
+package com.example.practice.stage_1.fourthTask
 
 class MultiEven(private val list: List<Int>): List<Int> by list{
     fun multiIfEven(): List<Int> = list.map {

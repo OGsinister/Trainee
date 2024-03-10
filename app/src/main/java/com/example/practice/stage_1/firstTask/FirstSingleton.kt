@@ -1,4 +1,4 @@
-package com.example.practice.firstTask
+package com.example.practice.stage_1.firstTask
 
 import android.util.Log
 
