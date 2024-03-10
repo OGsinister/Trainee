@@ -19,16 +19,16 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.example.practice.firstTask.FirstSingleton
-import com.example.practice.firstTask.SecondSingleton
-import com.example.practice.fourthTask.MultiEven
-import com.example.practice.fourthTask.multiIfEven
-import com.example.practice.secondTask.Audi
-import com.example.practice.secondTask.Kawasaki
-import com.example.practice.secondTask.Mercedes
-import com.example.practice.secondTask.Vehicles
-import com.example.practice.secondTask.Yamaha
-import com.example.practice.thirdTask.removeElement
+import com.example.practice.stage_1.firstTask.FirstSingleton
+import com.example.practice.stage_1.firstTask.SecondSingleton
+import com.example.practice.stage_1.fourthTask.MultiEven
+import com.example.practice.stage_1.fourthTask.multiIfEven
+import com.example.practice.stage_1.secondTask.Audi
+import com.example.practice.stage_1.secondTask.Kawasaki
+import com.example.practice.stage_1.secondTask.Mercedes
+import com.example.practice.stage_1.secondTask.Vehicles
+import com.example.practice.stage_1.secondTask.Yamaha
+import com.example.practice.stage_1.thirdTask.removeElement
 import com.example.practice.ui.theme.PracticeTheme
 
 class MainActivity : ComponentActivity() {
