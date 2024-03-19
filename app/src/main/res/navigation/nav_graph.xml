@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/taskFragment">
+    app:startDestination="@id/listCardFragment">
 
     <fragment
         android:id="@+id/taskFragment"
@@ -32,6 +32,15 @@
         tools:layout="@layout/fragment_third">
         <action
             android:id="@+id/action_thirdFragment_to_firstFragment"
+            app:destination="@id/taskFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listCardFragment"
+        android:name="com.example.practice.stage_3.third_task.ListCardFragment"
+        android:label="fragment_list_card"
+        tools:layout="@layout/fragment_list_card" >
+        <action
+            android:id="@+id/action_listCardFragment_to_taskFragment"
             app:destination="@id/taskFragment" />
     </fragment>
 </navigation>

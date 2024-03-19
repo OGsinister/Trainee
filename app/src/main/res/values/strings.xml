@@ -51,4 +51,5 @@
     <string name="GoThird">Go to 3 fragment</string>
     <string name="GoMain">Go to main fragment</string>
     <string name="toast_text">exit</string>
+    <string name="optionalimage">optionalImage</string>
 </resources>
