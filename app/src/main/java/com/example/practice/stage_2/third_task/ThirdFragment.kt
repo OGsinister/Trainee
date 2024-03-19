@@ -1,41 +1,25 @@
 package com.example.practice.stage_2.third_task
 
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import androidx.activity.OnBackPressedCallback
-import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import by.kirich1409.viewbindingdelegate.viewBinding
 import com.example.practice.R
 import com.example.practice.databinding.FragmentThirdBinding
+import com.example.practice.stage_3.second_task.BaseFragment
 
-class ThirdFragment : Fragment(R.layout.fragment_third) {
-    private var _binding: FragmentThirdBinding? = null
-    private val binding get() = _binding!!
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+class ThirdFragment : BaseFragment(R.layout.fragment_third) {
+    private val binding by viewBinding(FragmentThirdBinding::bind)
 
-    }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
-        _binding = FragmentThirdBinding.inflate(inflater, container, false)
-
-        _binding?.apply{
+        with(binding){
             BtnNav.setOnClickListener{
                 findNavController().navigate(R.id.action_thirdFragment_to_firstFragment)
             }
         }
-
-        val view = binding.root
-        return view
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
 
         val backPressedCallback: OnBackPressedCallback =
             object : OnBackPressedCallback(true) {
@@ -43,6 +27,7 @@ class ThirdFragment : Fragment(R.layout.fragment_third) {
                     findNavController().navigate(R.id.action_thirdFragment_to_firstFragment)
                 }
             }
+
         activity?.onBackPressedDispatcher?.addCallback(viewLifecycleOwner, backPressedCallback)
     }
 }
